@@ -31,6 +31,7 @@ function getResultHtml(result) {
 }
 
 function displayYoutubeSearchResults(data) {
+  .prop('hidden', false)
  const searchResults = data.items.map((item, index) => getResultHtml(item));
  console.log('displayYoutubeSearchResults', searchResults);
  $('.js-search-results').html(searchResults);
